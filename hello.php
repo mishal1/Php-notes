@@ -12,6 +12,16 @@
     // $_SERVER => reserved PHP variable that contains all web server information
     $myName = "Mishal";
     // variables start with $
+    if($myName == "Mishal"){
+      echo 'My name is Mishal';
+    } elseif($myName != "Mishal"){
+      echo 'My name is not Mishal'
+    } else {
+      print 'This statement will never be shown';
+    }
   ?>
 </body>
 </html>
+
+
+
