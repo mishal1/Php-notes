@@ -19,6 +19,15 @@
     } else {
       print 'This statement will never be shown';
     }
+    // if,elseif & else statements
+    switch ($fruit) {
+      case 'Apple': 'Apple':
+        echo "Yummy.";
+        break;
+      default:
+        echo 'Not Apple';
+    }
+    // switch statements
   ?>
 </body>
 </html>
