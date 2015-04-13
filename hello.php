@@ -132,6 +132,25 @@
     }
     aboutMe("mishal", 22);
     // prints out variables in string
+    class Class {
+      public $prop1 = true;
+      public $prop2;
+
+      public function __construct($prop2) {
+        $this->prop2 = $prop2;
+      }
+
+      public function functionName(){
+        return $this->prop1;
+      }
+    }
+    $class = new Class('hello');
+    echo $class->prop1;
+    // prints 1
+    echo $class->prop2;
+    // prints 'hello'
+    echo $class->functionName();
+
   ?>
 </body>
 </html>
