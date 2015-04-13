@@ -205,7 +205,12 @@
     }
     echo Person::greet();
     // static keyword lets you use a class property or method without creating a new instance of that class
-    
+    $assoArray = array('name' => 'Mishal')
+    echo $assoArray['name']
+    // associative array/ map => like ruby hash with key and value pair
+    foreach($assoArray as $key => $value){
+      echo "$key : $value"
+    }
   ?>
 </body>
 </html>
