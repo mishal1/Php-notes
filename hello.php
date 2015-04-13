@@ -151,6 +151,61 @@
     // prints 'hello'
     echo $class->functionName();
 
+    if(is_a($class, "Class")){
+      echo 'Class exists';
+    }
+
+    if(property_exists($class, "prop1")){
+      echo 'Property exists';
+    }
+
+    if(method_exists($class, "functionName")){
+      echo 'Method exists';
+    }
+
+    class Shape {
+      public $hasSides = true;
+    }
+    
+    class Square extends Shape {
+    
+    }
+    
+    $square = new Square();
+    if (property_exists($square, "hasSides")) {
+      echo "I have sides!";
+    }
+    // inheritance
+
+    class Circle extends Shape {
+      public $hasSides = false;
+    }
+    // overrides parent property
+
+    class something {
+      final public function blah(){
+        return 'no overriding'
+      }
+    }
+    // parent class can prevent its methods to be overridden
+    // error message will show if child class attempts to override method
+
+    class Blah {
+      const something = 'hello';
+    }
+    // variable cannot be changed
+    echo Blah::something;
+    // echoes 'hello'
+    // :: -> known as scope resolution operator
+    class Person {
+      public static $isAlive = true;
+      public static function greet(){
+        echo 'Hello'
+      }
+    }
+    echo Person::greet();
+    // static keyword lets you use a class property or method without creating a new instance of that class
+    
   ?>
 </body>
 </html>
