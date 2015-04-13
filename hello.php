@@ -84,6 +84,19 @@
       $loopCond = false;
     endwhile;
     // alternative syntax
+    $length = strlen("mishal");
+    print $length;
+    // string length
+    $name = "mishal";
+    $partial = substr($name, 0, 4);
+    print $partial;
+    // print partial string
+    $upper = strtoupper($name);
+    print $upper;
+    // uppercase
+    $lower = strtolower($name);
+    print $name;
+    // lowercase
   ?>
 </body>
 </html>
