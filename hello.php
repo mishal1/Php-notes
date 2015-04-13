@@ -163,6 +163,10 @@
       echo 'Method exists';
     }
 
+    if(is_subclass_of($class, 'OtherClass')){
+      echo 'child of OtherClass';
+    }
+
     class Shape {
       public $hasSides = true;
     }
@@ -210,6 +214,63 @@
     // associative array/ map => like ruby hash with key and value pair
     foreach($assoArray as $key => $value){
       echo "$key : $value"
+    }
+
+    function greeting($name = 'friend', $timeOfDay = Null){
+      if($timeOfDay){
+        echo "Hi $name, good $timeOfDay";
+      } else {
+        echo "Hi $name";
+      }
+    }
+    // default arguments
+
+    $name = "mishal"
+
+    $greet = function use ($name){
+      echo "hello $name"
+    }
+    $greet();
+    // uses variable outside of function scope
+    class Something {
+      public $name;
+      public static $foo = "foo";
+      public function __construct($name){
+        $this->name = $name;
+      }
+      public function getFoo(){
+        return self::$foo;
+      }  
+    }
+    class Blah {
+      public $age;
+      function __construct($name, $age){
+        parent::__construct($name);
+        $this->age = $age;
+      }
+    }
+    $blah = new Blah("mishal", 22);
+    echo $blah->getFoo();
+    // more inheritance
+    $class = "Blah";
+    $p = new $class;
+    $m = "getFoo"
+    $something = $p->m();
+    // class and method interaction
+
+    try {
+
+    } catch (Exception $e){
+      $e->getMessage();
+      // get the message that was passed into the exception constructor when the exception was thrown
+      $e->getCode();
+      // return only the integer of the error code that was passed
+      $e->getFile();
+      // This will get the error of the file in which the error was actually generated
+      $e->getTrace();
+      // This will return a multi dimentional array containing the trace methods that lead up to the exception
+      $e->getTraceAsString();
+      // same as getTrace but as a string format
     }
   ?>
 </body>
