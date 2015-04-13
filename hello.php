@@ -97,9 +97,41 @@
     $lower = strtolower($name);
     print $name;
     // lowercase
+    print strpos("mishal", "i");
+    // string position
+    $round = round(4.12345, 4);
+    print $round;
+    // print round number to 4 decimal places
+    print rand();
+    // prints a number between 0 and 32767
+    print rand(1,10);
+    // prints a number between 1 and 10
+    $array = array();
+    array_push($array, 'mishal');
+    print count($array);
+    // array functions
+    $the_array = array(1, 6, 8, 5);
+    sort($the_array);
+    // sort
+    print join(", ", $the_array);
+    // join array
+    rsort($the_array);
+    // reverse
+    print join(", ", $the_array);
+    // join array
+    function helloWorld(){
+      echo "hello world"
+    }
+    helloWorld();
+    function returnName(){
+      return 'Mishal';
+    }
+    returnName();
+    function aboutMe($name, $age){
+      echo "Hello! My name is $name and I am $age years old.";
+    }
+    aboutMe("mishal", 22);
+    // prints out variables in string
   ?>
 </body>
 </html>
-
-
-
